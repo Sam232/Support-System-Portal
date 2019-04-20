@@ -23,6 +23,7 @@ class App extends Component {
         <PersistGate persistor={persistor}>
           <Router>
             <Switch>
+              <Route exact path="/" component={userIsNotAuthenticated(UserLogin)} />
               <Route exact path="/admin/7f2db1e4-66ed" component={adminIsNotAuthenticated(AdminLogin)} />
               <Route exact path="/dashboard" component={adminIsAuthenticated(AdminDashboard)} />
               <Route exact path="/user-login" component={userIsNotAuthenticated(UserLogin)} />
