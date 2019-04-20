@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Card, Message, Button } from "semantic-ui-react";
-import _ from "lodash";
 import { viewResponse } from "../../../redux/Actions/User/User";
 import Navbar from "../Navbar/Navbar";
 import "./ReadSingleResponse.css";

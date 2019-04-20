@@ -33,24 +33,26 @@ class ReadAllResponses extends Component {
     if(received){
       return {
         ...state,
-        responses
+        responses,
+        msg: "",
+        errorMsg: ""
       };
     }
 
     else if(msg){
       return {
         ...state,
-        responses,
+        responses: [],
         msg,
-        errorMsg
+        errorMsg: ""
       };
     }
 
     else if(errorMsg){
       return {
         ...state,
-        responses,
-        msg,
+        responses: [],
+        msg: "",
         errorMsg
       };
     }
@@ -72,7 +74,7 @@ class ReadAllResponses extends Component {
                   <Card.Content extra>
                     <Icon name='announcement' />
                     {
-                      response.status == "answered" ? <Link to={`/response/${response._id}`}>View Response</Link> :
+                      response.status === "answered" ? <Link to={`/response/${response._id}`}>View Response</Link> :
                         "Not Answered"
                     }
                   </Card.Content>

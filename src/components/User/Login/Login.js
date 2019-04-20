@@ -96,7 +96,7 @@ class Login extends Component {
         <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle' >
           <Grid.Column style={{ maxWidth: 450 }}>
             <Icon name='computer' size="large" />
-            <Header as='h2' color='white' textAlign='center'>
+            <Header as='h2' color='black' textAlign='center'>
               Support System
             </Header>
             {

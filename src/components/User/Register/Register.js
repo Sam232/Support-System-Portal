@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Form, Grid, Header, Message, Segment } from "semantic-ui-react";
+import { Button, Form, Grid, Header, Message, Segment, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from 'prop-types';
@@ -175,8 +175,9 @@ class Register extends Component {
       <div style={{ marginTop: "7em" }}>
         <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle' >
           <Grid.Column style={{ maxWidth: 450 }}>
-            <Header as='h2' color='white' textAlign='center'>
-            Support System
+            <Icon name='computer' size="large" />
+            <Header as='h2' color='black' textAlign='center'>
+              Support System
             </Header>
             {
               msg ? <Message positive>
@@ -233,7 +234,7 @@ class Register extends Component {
                   value={confirmPassword}
                   onChange={this.submitData}
                 />
-                <Button color='blue' fluid size='large'>
+                <Button color='black' fluid size='large'>
                   Register
                 </Button>
               </Segment>

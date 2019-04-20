@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import { Segment, Menu, Icon, Message } from "semantic-ui-react";
-import { Link, withRouter } from "react-router-dom";
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import { Segment, Menu, Icon } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 import { persistor } from '../../../redux/Store';
-import { logoutUser } from "../../../redux/Actions/User/User";
 
 class Navbar extends Component {
   constructor(){

@@ -133,7 +133,7 @@ class SendSupport extends Component {
   }
 
   render(){
-    const { subject, body, private_, msg, validation: { subjectError, bodyError, errorMsg } } = this.state;
+    const { subject, body, msg, validation: { subjectError, bodyError, errorMsg } } = this.state;
 
     return(
       <React.Fragment>

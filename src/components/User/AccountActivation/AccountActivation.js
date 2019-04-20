@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { activateAccount } from "../../../redux/Actions/User/User";
 import { Message } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import { css } from "@emotion/core";
 import { PulseLoader } from "react-spinners";
 import './AccountActivation.css';
 
