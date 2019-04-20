@@ -20,7 +20,7 @@ import {
 export const authenticateUser = action => dispatch => {
   const { email, password } = action.payload;
 
-  axios.post("https://ssrestfulapi.herokuapp.com/user/login", {
+  axios.post("http://localhost:4000/user/login", {
     email,
     password
   })
@@ -57,7 +57,7 @@ export const authenticateUser = action => dispatch => {
 export const registerUser = action => dispatch => {
   const { firstName, lastName, email, password, confirmPassword } = action.payload;
 
-  axios.post("https://ssrestfulapi.herokuapp.com/user/register", {
+  axios.post("http://localhost:4000/user/register", {
     firstName,
     lastName,
     emailAddress: email,
@@ -96,7 +96,7 @@ export const registerUser = action => dispatch => {
 export const activateAccount = action => dispatch => {
   const { accountId } = action.payload;
 
-  axios.put(`https://ssrestfulapi.herokuapp.com/user/activate/new-account/${accountId}`)
+  axios.put(`http://localhost:4000/user/activate/new-account/${accountId}`)
     .then(response => {
       if (response.data.msg) {
         dispatch({
@@ -132,7 +132,7 @@ export const activateAccount = action => dispatch => {
 export const fetchReceivedResponses = action => dispatch => {
   const { _id, token } = action.payload;
  
-  axios.get(`https://ssrestfulapi.herokuapp.com/user/read/user-support/responses/${_id}`, {
+  axios.get(`http://localhost:4000/user/read/user-support/responses/${_id}`, {
     headers: {
       authorization: `bearer ${token}`
     }
@@ -183,7 +183,7 @@ export const fetchReceivedResponses = action => dispatch => {
 export const submitSupport = action => dispatch => {
   const { _id, token, subject, body, private_ } = action.payload;
 
-  axios.post("https://ssrestfulapi.herokuapp.com/user/submit/user-support/", {
+  axios.post("http://localhost:4000/user/submit/user-support/", {
     userId: _id,
     subject,
     body,
@@ -225,7 +225,7 @@ export const submitSupport = action => dispatch => {
 export const viewResponse = action => dispatch => {
   const { id, token } = action.payload;
   
-  axios.get(`https://ssrestfulapi.herokuapp.com/user/view/user-support-response/${id}`, {
+  axios.get(`http://localhost:4000/user/view/user-support-response/${id}`, {
     headers: {
       authorization: `bearer ${token}`
     }
@@ -262,7 +262,7 @@ export const viewResponse = action => dispatch => {
 export const logoutUser = action => dispatch => {
   const { token } = action.payload;
   
-  axios.post("https://ssrestfulapi.herokuapp.com/user/logout", {}, {
+  axios.post("http://localhost:4000/user/logout", {}, {
     headers: {
       authorization: `bearer ${token}`
     }

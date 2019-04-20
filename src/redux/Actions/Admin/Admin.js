@@ -9,7 +9,7 @@ import {
 //Authenticate Admin
 export const authenticateAdmin = action => dispatch => {
   const { email, password } = action.payload;
-  axios.post("https://ssrestfulapi.herokuapp.com/admin/7f2db1e4-66ed/login", {
+  axios.post("http://localhost:4000/admin/7f2db1e4-66ed/login", {
     email,
     password
   })
@@ -46,7 +46,7 @@ export const authenticateAdmin = action => dispatch => {
 export const fetchUserSupports = action => dispatch => {
   const { token } = action.payload;
  
-  axios.get("https://ssrestfulapi.herokuapp.com/admin/7f2db1e4-66ed/view/received/user-support", {
+  axios.get("http://localhost:4000/admin/7f2db1e4-66ed/view/received/user-support", {
     headers: {
       authorization: `bearer ${token}`
     }
